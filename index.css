@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {    
+    background-color: #1C1C1C;   
+}
+
+
+    
+.wrapper{
+    width: 550px;
+    height: 779px;  
+    margin: 0 auto;
+    background-size: 100%;
+   
+     
+}
+header{
+    display: flex;
+    justify-content:  space-around;
+    background-color: #0E0E0E;
+    align-items: center;
+    color: #FFFFFF;     
+    position: relative;
+    height: 208px;
+    width: 550px;
+    background-image: url("images/movie-poster.png")
+}
+.list-link{
+    color: #FFFFFF;
+    text-decoration: none; 
+    font-size: 14px;
+    font-weight: bold;  
+}
+.search-bar{
+    width: 550px;
+    display:flex;
+    justify-content:center;
+    position: absolute;
+    margin-top: -19px;
+        
+}
+#search-input{
+    height: 38px;
+    width: 342px;
+    border: #D1D5DB 1px solid;
+    border-radius: 6px 0 0 6px;
+    padding-left: 25px;
+    background: url("images/icon-search.png") no-repeat left;
+    background-size: 20px;
+    background-color:#FFFFFF; 
+}
+#search-btn{
+   width: 120px;
+   border: #D1D5DB 1px solid;
+   border-radius:  0 6px 6px 0;
+}
+#main-container{
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 550px;
+    justify-content: center;
+    overflow: auto;
+     
+}
+.poster-img{
+    width: 99px;
+    height:147px;
+    display: 100%;
+}
+.icon-img{
+    width: 12px;
+    height:12px;
+    border-radius: 50%;
+}
+.movie-container{
+    display: flex;
+    padding: 30px 0 0 30px;   
+    
+}
+.movie-detail{
+    display: flex;
+    margin:5px 10px;  
+    align-items: center;
+    
+}
+#add-btn{
+     height:12px;
+     border: none;
+     font-size: 12px;
+     background-color: #FFFFFF; 
+}
+.remove-btn{  
+    height:12px;
+    border: none;
+    font-size: 12px;
+    background-color: #FFFFFF; 
+}
+.text-explore{
+    color: #DFDDDD;
+    text-align:center;
+ }
+.text-no-result{
+    color: #DFDDDD;
+    text-align:center;
+    margin-top: 200px; 
+}
+.icon-movie{
+    width: 70px;
+    display: block;
+    margin: auto;
+    margin-top: 200px;      
+}
+p {
+  font-size: 12px;   
+  margin: 5px 17px 0 5px ;
+}
+h4{
+   margin: 0 10px 0 5px; 
+}
+hr{
+    width: 89%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+h5{
+    text-align:center; 
+}
+.add-movie-msg{
+    display: flex;
+    justify-content: center; 
+    padding: 5px;
+    align-items:center; 
+}
