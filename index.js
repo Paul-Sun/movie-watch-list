@@ -1,9 +1,7 @@
 const searchInput = document.getElementById("search-input")
-//let currentMovie ={}
 let myMovies = []
 document.getElementById("search-btn").addEventListener("click", function(e){
     e.preventDefault()
-  //  console.log(searchInput.value)
     fetch(`https://www.omdbapi.com/?t=${searchInput.value}&apikey=cef19669`)
         .then (res => res.json())
         .then (data => {         
@@ -13,22 +11,13 @@ document.getElementById("search-btn").addEventListener("click", function(e){
                 
                 document.getElementById("add-btn").addEventListener("click", function()
                     {
-                        let watchlistString = localStorage.getItem("myWatchList")
-                        console.log(watchlistString)
-                        if (watchlistString == ""){
-                            myMovies.push(data)                        
-                            localStorage.setItem("myWatchList", JSON.stringify(myMovies))  
-                            console.log(myMovies)
-                        }else{
-                            let watchlist = JSON.parse(watchlistString)
+                            let watchlist = JSON.parse(localStorage.getItem("myWatchList"))         
                             if(!isItemInObjectArray(data.Title, watchlist)){
+                                if(watchlist === null) {watchlist = []}
                                 watchlist.push(data)
                                 localStorage.setItem("myWatchList", JSON.stringify(watchlist)) 
                             }
-                       
-                        }
-                    })  
-                
+                     })           
                 
             }
             else {
@@ -64,12 +53,15 @@ function renderFilmContent(data){
 }
 
 function isItemInObjectArray(item, arr){
-    for(let i=0; i < arr.length; i++){
-        if(item == arr[i].Title){
-            return true
-        }         
+    if(arr === null) return false
+    else {
+        for(let i=0; i < arr.length; i++){
+            if(item == arr[i].Title){
+                return true
+            }         
+        }
+        return false
     }
-    return false
 }
 
 

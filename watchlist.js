@@ -1,7 +1,7 @@
 let watchList = JSON.parse(localStorage.getItem("myWatchList"))
 
 function renderFilmContent(data){
-    if(data.length == 0){
+    if(data == undefined || data.length == 0){
         document.getElementById("main-container").innerHTML = 
         `<h5 class="text-no-result" >Your watchlist is looking a little empty...</h5>
           <div class="add-movie-msg"><img class = "icon-img" src="images/icon-add.png">
