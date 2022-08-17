@@ -41,5 +41,4 @@ function removeMovie(clickID) {
     newWatchlist.splice(clickID, 1)
     localStorage.setItem("myWatchList", JSON.stringify(newWatchlist))
     renderFilmContent(newWatchlist)    
-    console.log("remove movie:" + clickID);
 }

@@ -33,7 +33,6 @@ header{
     text-decoration: none; 
     font-size: 14px;
     font-weight: bold;  
-    cursor: pointer;
 }
 .search-bar{
     width: 550px;
@@ -57,7 +56,6 @@ header{
    width: 120px;
    border: #D1D5DB 1px solid;
    border-radius:  0 6px 6px 0;
-   cursor: pointer;
 }
 #main-container{
     background-color: #FFFFFF;
@@ -88,19 +86,17 @@ header{
     align-items: center;
     
 }
-#add-btn{
+.add-btn{
      height:12px;
      border: none;
      font-size: 12px;
      background-color: #FFFFFF; 
-     cursor: pointer;
 }
 .remove-btn{  
     height:12px;
     border: none;
     font-size: 12px;
     background-color: #FFFFFF; 
-    cursor: pointer;
 }
 .text-explore{
     color: #DFDDDD;
